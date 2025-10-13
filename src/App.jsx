@@ -6,14 +6,15 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 
+
 function App() {
 
   return (
     <>
-    <div className="bg-gray-50 text-gray-800">
+    <div>
       <Navbar/>
       <HeroSection />
-      <About />
+      <About />   
       <Skills />
       <Projects />
       <Contact />
