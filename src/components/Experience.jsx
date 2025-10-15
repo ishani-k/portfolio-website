@@ -53,13 +53,13 @@ export default function Experience() {
                 <div className="md:grid md:grid-cols-12 md:gap-4">
                   {/* Timeline line */}
                   <div className="hidden md:block md:col-span-1 relative">
-                    <div className="h-full w-px bg-peach-300 dark:bg-gray-700 absolute left-1/2 transform -translate-x-1/2" />
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-peach-500 dark:bg-primary border-4 border-cream dark:border-gray-900" />
+                    <div className="h-full w-px bg-blue-900 dark:bg-gray-700 absolute left-1/2 transform -translate-x-1/2" />
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-900 dark:bg-primary border-4 border-cream dark:border-gray-900" />
                   </div>
 
                   {/* Mobile timeline dot */}
                   <div className="absolute left-0 top-0 md:hidden">
-                    <div className="w-4 h-4 rounded-full bg-peach-500 dark:bg-primary border-4 border-cream dark:border-gray-900" />
+                    <div className="w-4 h-4 rounded-full bg-blue-900 dark:bg-primary border-4 border-cream dark:border-gray-900" />
                   </div>
 
                   {/* Content */}

@@ -36,11 +36,11 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-lg">
+              <div className="relative w-96 aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
                 <img
                   src={profileImage}
                   alt="Ishani's portrait"
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full scale-150"
                 />
               </div>
             </motion.div>
@@ -61,25 +61,10 @@ export default function About() {
                Alongside development, I have a strong foundation in Data Structures and Algorithms, which allows me to approach problems methodically, optimize performance, and design efficient solutions. I enjoy tackling complex challenges and continuously refining my skills to deliver projects that are both functional and impactful.
               </p>
 
-              {/* Skills */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3">My Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-peach-100 dark:bg-gray-800 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
               {/* Resume Button */}
               <Button
                 variant="outline"
-                className="mt-4 border-peach-300 hover:bg-peach-100 dark:border-gray-700 dark:hover:bg-gray-800"
+                className="mt-4 flex items-center border-blue-400 hover:bg-pink-100 dark:border-gray-700 dark:hover:bg-gray-800"
               >
                 <a href="/resume.pdf" download="Ishani_Kundu_Resume.pdf" className="flex items-center">
                   <FileDown className="mr-2 h-4 w-4" />

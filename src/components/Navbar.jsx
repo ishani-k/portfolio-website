@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -33,10 +32,10 @@ export default function Header() {
           : "bg-transparent"
       )}
     >
-      <div className="container px-4 py-4 flex items-center justify-between">
+      <div className="flex items-center justify-between px-20 py-5">
         <a
           href="#home"
-          className="text-xl font-bold tracking-tight hover:text-black-600 transition-colors"
+          className="text-2xl font-bold tracking-tight text-gray-800 hover:text-pink-700 hover:text-[25px] transition-all"
         >
           ishani-kundu.
         </a>
@@ -47,7 +46,7 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium hover:text-black-600 transition-colors"
+              className="text-sm font-medium text-gray-800 hover:text-pink-500 hover:opacity-80 transition-all"
             >
               {item.name}
             </a>
@@ -57,20 +56,19 @@ export default function Header() {
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center gap-2 md:hidden">
-          
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <Menu className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-cream dark:bg-gray-950 z-50 flex flex-col p-6">
+          <div className="md:hidden fixed inset-0 top-16 bg-cream dark:bg-gray-950 z-50 flex flex-col p-6 backdrop-blur-md shadow-sm">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -83,6 +81,7 @@ export default function Header() {
             ))}
           </div>
         )}
+        
       </div>
     </header>
   );
