@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <div style={{backgroundImage: "url('/bgImage.png')"}} className='bg-center bg-contain'>
+    <div style={{backgroundImage: "url('/bgImage.jpeg')"}} className='bg-center bg-contain'>
       <Navbar/>
       <HeroSection />
       <About />   

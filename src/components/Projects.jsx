@@ -42,7 +42,7 @@ export default function Projects()  {
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-white/80 dark:bg-gray-900 rounded-xl flex overflow-hidden shadow-md"
+                className="bg-white/80  rounded-xl flex overflow-hidden shadow-md"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -52,7 +52,7 @@ export default function Projects()  {
                   <img
                     src={project.image}
                     alt={project.title} 
-                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-105 border"
                   />
                 </div>
 
