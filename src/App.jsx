@@ -2,6 +2,7 @@ import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
 import Experience from './components/Experience'
+import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -20,6 +21,7 @@ function App() {
       <Experience/>
       <Projects />
       <Contact />
+      <Footer />
     </div>
     </>
   )

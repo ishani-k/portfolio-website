@@ -61,16 +61,7 @@ export default function About() {
                Alongside development, I have a strong foundation in Data Structures and Algorithms, which allows me to approach problems methodically, optimize performance, and design efficient solutions. I enjoy tackling complex challenges and continuously refining my skills to deliver projects that are both functional and impactful.
               </p>
 
-              {/* Resume Button */}
-              <Button
-                variant="outline"
-                className="mt-4 flex items-center border-blue-400 hover:bg-pink-100 dark:border-gray-700 dark:hover:bg-gray-800"
-              >
-                <a href="/resume.pdf" download="Ishani_Kundu_Resume.pdf" className="flex items-center">
-                  <FileDown className="mr-2 h-4 w-4" />
-                  Download Resume
-                </a>
-              </Button>
+              
             </motion.div>
           </div>
         </motion.div>

@@ -10,6 +10,9 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 @layer base {

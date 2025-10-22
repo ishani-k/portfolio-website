@@ -66,14 +66,24 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href="#contact">
+            <div className="flex justify-center gap-5">
+              <a href="#contact">
               <Button
                 size="lg"
-                className="rounded-full px-8 hover:bg-pink-300 dark:bg-blue-600 dark:hover:bg-blue-700"
+                className="rounded-full px-8 hover:bg-gray-500 dark:bg-blue-600 dark:hover:bg-blue-700"
               >
                 Let's Connect
               </Button>
             </a>
+            <a href="https://drive.google.com/file/d/1y2WDkc83fTQeViahD96p5vtL47UfGdxT/view" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="rounded-full px-8 hover:bg-gray-500 "
+              >
+                View Resume
+              </Button>
+            </a>
+            </div>
           </motion.div>
         </motion.div>
       </div>
