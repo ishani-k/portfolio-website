@@ -58,7 +58,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             I specialize in developing robust web applications with a focus on functionality and performance.
-            From frontend interfaces to backend logic, I love turning ideas into seamless digital experiences.
+            From frontend interfaces to backend logic, <br /> I love turning ideas into seamless digital experiences.
           </motion.p>
 
           <motion.div
