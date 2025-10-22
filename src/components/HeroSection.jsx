@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, FileUser, Send } from "lucide-react";
 
 export default function Hero() {
   const [theme, setTheme] = useState("light");
@@ -70,9 +70,9 @@ export default function Hero() {
               <a href="#contact">
               <Button
                 size="lg"
-                className="rounded-full px-8 hover:bg-gray-500 dark:bg-blue-600 dark:hover:bg-blue-700"
+                className="rounded-full px-8 hover:bg-gray-500"
               >
-                Let's Connect
+                <Send />Let's Connect
               </Button>
             </a>
             <a href="https://drive.google.com/file/d/1y2WDkc83fTQeViahD96p5vtL47UfGdxT/view" target="_blank" rel="noopener noreferrer">
@@ -80,7 +80,7 @@ export default function Hero() {
                 size="lg"
                 className="rounded-full px-8 hover:bg-gray-500 "
               >
-                View Resume
+                <FileUser /> Resume
               </Button>
             </a>
             </div>

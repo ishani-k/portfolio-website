@@ -6,9 +6,8 @@ const experiences = [
     title: "Software Developer Intern",
     company: "Veer Marathon",
     period: "July 2025 - August 2025",
-    description:
-      "Designed and managed PostgreSQL database with 5K+ participant entries, ensuring 100% data accuracy.",
     details: [
+      "Designed and managed PostgreSQL database with 5K+ participant entries, ensuring 100% data accuracy.",
       "Utilized Supabase for authentication and database management, streamlining registration and tracking workflows.",
       "Optimized queries and indexing, improving DB response time by 30% and reducing redundancy.",
     ],
@@ -17,9 +16,8 @@ const experiences = [
     title: "Cloud and Digital Launchpad Trainee",
     company: "PwC Acceleration Centre",
     period: "February 2024 – July 2024",
-    description:
-      "Ranked in the top 1% performers out of 500+ participants nationwide, recognized for technical excellence.",
     details: [
+      "Ranked in the top 1% performers out of 500+ participants nationwide, recognized for technical excellence.",
       "Completed 80+ hours of training on AWS, Azure, and GCP, building skills in cloud deployment and infrastructure.",
       "Gained hands-on experience in DevOps and automation, applying concepts to 3+ digital transformation case studies.",
     ],
@@ -32,13 +30,15 @@ export default function Experience() {
     <section id="experience" className="py-20 section-gradient-2">
       <div className="container mx-auto px-4">
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto" // widened to match contact section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Professional Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            Professional Experience
+          </h2>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -63,7 +63,7 @@ export default function Experience() {
                   </div>
 
                   {/* Content */}
-                  <div className="md:col-span-11 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                  <div className="md:col-span-11 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm max-w-3xl md:max-w-5xl mx-auto w-[95%] md:w-full">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold">{exp.title}</h3>
@@ -83,11 +83,10 @@ export default function Experience() {
                           </p>
                         </div>
                       </div>
-                      <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">{exp.period}</span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">
+                        {exp.period}
+                      </span>
                     </div>
-
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">{exp.description}</p>
-
                     <ul className="space-y-2">
                       {exp.details.map((detail, idx) => (
                         <li key={idx} className="text-gray-600 dark:text-gray-400">
