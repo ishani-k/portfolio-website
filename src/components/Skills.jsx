@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -6,34 +7,50 @@ import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
-  FaDatabase,
+  FaJava,
 } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiExpress, SiCplusplus, SiNextdotjs, SiTypescript, SiPostgresql, SiSupabase, SiVercel, SiMysql } from "react-icons/si";
-import { GrMysql } from "react-icons/gr"
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiCplusplus,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
+  SiSupabase,
+  SiVercel,
+  SiC,
+} from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 
 const techStack = [
   { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
   { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+  { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
+  { name: "Java", icon: <FaJava className="text-blue-400" /> },
   { name: "React", icon: <FaReact className="text-sky-400" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white"/> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
   { name: "Express", icon: <SiExpress className="text-gray-900" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-  { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
   { name: "MySQL", icon: <GrMysql className="text-gray-900" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-700" /> },
   { name: "Supabase", icon: <SiSupabase className="text-green-500" /> },
-  { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
-  
+  { name: "Vercel", icon: <SiVercel className="text-black" /> },
 ];
+
+// Split techStack into two halves
+const half = Math.ceil(techStack.length / 2);
+const firstHalf = techStack.slice(0, half);
+const secondHalf = techStack.slice(half);
 
 export default function ToolsAndTech() {
   return (
-    <section id="tech" className="py-20  dark:from-gray-900 dark:to-gray-800">
+    <section id="tech" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -45,49 +62,64 @@ export default function ToolsAndTech() {
           Tools & Technologies
         </motion.h2>
 
-        {/*<motion.div
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center"
-          initial={{ opacity: 0 , x: -20}}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.0 }}
-        >
-          {techStack.map((tech, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center space-y-2"
-            >
-              <div className="text-5xl transition-transform duration-300">{tech.icon}</div>
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{tech.name}</p>
-            </motion.div>
-          ))}
-        </motion.div> */}
+        {/* Marquee strips with fade edges */}
+        <div className="relative overflow-hidden">
+          {/* Gradient overlays */}
+          <div className="pointer-events-none absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white"></div>
+          <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white"></div>
 
-        <motion.div
-  className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center"
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1.0 }}
->
-  {techStack.map((tech, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, x: 50 }} 
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      whileHover={{ scale: 1.1 }}
-      className="flex flex-col items-center space-y-2"
-    >
-      <div className="text-5xl transition-transform duration-300">{tech.icon}</div>
-      <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{tech.name}</p>
-    </motion.div>
-  ))}
-</motion.div>
+          {/* First strip: left to right */}
+          <div className="flex animate-marquee gap-6 whitespace-nowrap hover:pause-marquee">
+            {firstHalf.concat(firstHalf).map((tech, index) => (
+              <Button
+                key={`top-${index}`}
+                variant="outline"
+                className="flex items-center gap-2 px-4 py-2 text-sm md:text-base inline-flex"
+              >
+                <span className="text-lg">{tech.icon}</span>
+                {tech.name}
+              </Button>
+            ))}
+          </div>
 
+          {/* Second strip: right to left */}
+          <div className="flex animate-marquee-reverse gap-6 whitespace-nowrap mt-4 hover:pause-marquee">
+            {secondHalf.concat(secondHalf).map((tech, index) => (
+              <Button
+                key={`bottom-${index}`}
+                variant="outline"
+                className="flex items-center gap-2 px-4 py-2 text-sm md:text-base inline-flex"
+              >
+                <span className="text-lg">{tech.icon}</span>
+                {tech.name}
+              </Button>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-reverse {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+        .animate-marquee {
+          display: inline-flex;
+          animation: marquee 20s linear infinite; /* slower & smoother */
+        }
+        .animate-marquee-reverse {
+          display: inline-flex;
+          animation: marquee-reverse 20s linear infinite; /* slower & smoother */
+        }
+        .hover\\:pause-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 }

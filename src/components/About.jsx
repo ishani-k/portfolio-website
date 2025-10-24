@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
 import profileImage from "../assets/ishani.jpg";
-
-const skills = [
-  "C++",
-  "JavaScript",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "MySQL",
-  "Frontend Development",
-  "Problem Solving",
-];
+import { Button } from "./ui/button"; 
+import { SiLeetcode } from "react-icons/si"; // LeetCode logo
 
 export default function About() {
   return (
@@ -53,13 +43,27 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-6"
             >
-              <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-justify">
+              <p className="text-base sm:text-lg text-gray-700 text-justify">
                 I’m a 2025 B.Tech CSE (AI & ML) graduate who builds full-stack web applications that balance clean design with solid engineering. I enjoy working across the stack, from crafting intuitive interfaces to building efficient backend systems and managing databases.
               </p>
 
-              <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-justify">
+              <p className="text-base sm:text-lg text-gray-700 text-justify">
                 With strong problem-solving skills in Data Structures and Algorithms and a foundation in AI & ML, I focus on creating smart, scalable, and reliable digital solutions.
               </p>
+
+              {/* LeetCode Button */}
+              <div className="flex flex-wrap justify-start mt-4">
+                <Button variant='ghost' className='hover:bg-gray-200 border border-gray-600 text-xs rounded-full sm:text-sm md:text-base px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 flex items-center gap-2'>
+                  <a
+                    href="https://leetcode.com/u/ishani_k/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    <SiLeetcode className="h-4 w-4 sm:h-5 sm:w-5" />  LeetCode
+                  </a>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </motion.div>

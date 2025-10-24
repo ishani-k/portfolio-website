@@ -42,14 +42,13 @@ const projects = [
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "Clerk Auth", icon: <SiClerk /> },
       { name: "Razorpay", icon: <SiRazorpay /> },
-
     ],
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 section-gradient-2 px-10">
+    <section id="projects" className="py-20 section-gradient-2 px-6 sm:px-8 md:px-10">
       <div className="container mx-auto">
         <motion.div
           className="max-w-6xl mx-auto"
@@ -58,11 +57,11 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold mb-10 sm:mb-12 text-center">
             Projects
           </h2>
 
-          <div className="space-y-12">
+          <div className="space-y-10 sm:space-y-12">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -82,9 +81,9 @@ export default function Projects() {
                 </div>
 
                 {/* Text section */}
-                <div className="p-6 md:w-1/2">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <div className="p-4 sm:p-6 md:w-1/2">
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-base text-gray-700 mb-4">
                     {project.description}
                   </p>
 
@@ -94,31 +93,31 @@ export default function Projects() {
                       <Button
                         key={i}
                         variant="outline"
-                        className="flex items-center gap-2 cursor-default border-gray-400 rounded-lg dark:border-gray-700 bg-gray dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                        className="flex items-center gap-2 cursor-default border-gray-400 rounded-lg bg-gray-100 text-gray-800 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 lg:px-3 lg:py-1.5"
                       >
-                        <span className="text-lg">{tech.icon}</span>
-                        <span className="text-sm">{tech.name}</span>
+                        <span className="text-sm sm:text-base md:text-lg lg:text-base">{tech.icon}</span>
+                        <span className="text-xs sm:text-sm md:text-base lg:text-sm">{tech.name}</span>
                       </Button>
                     ))}
                   </div>
 
                   {/* Links */}
-                  <div className="flex flex-wrap gap-3">
-                    <Button className="bg-black hover:bg-gray-600 dark:bg-blue-600 dark:hover:bg-blue-700">
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <Button className="bg-black hover:bg-gray-700 text-xs sm:text-sm md:text-base lg:text-sm px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 lg:py-1.5">
                       <a
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center"
                       >
-                        <ExternalLink className="mr-2 h-4 w-4" />
+                        <ExternalLink className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                         View Project
                       </a>
                     </Button>
 
                     <Button
                       variant="outline"
-                      className="border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+                      className="border-gray-300 hover:bg-gray-100 text-xs sm:text-sm md:text-base lg:text-sm px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 lg:py-1.5"
                     >
                       <a
                         href={project.githubLink}
@@ -126,7 +125,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="flex items-center"
                       >
-                        <Github className="mr-2 h-4 w-4" />
+                        <Github className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                         View Code
                       </a>
                     </Button>
