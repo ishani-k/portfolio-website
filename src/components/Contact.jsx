@@ -91,9 +91,9 @@ const Contact = () => {
             You can also find me here:
           </p>
           <p>
-            LinkedIn - <br />
-            Twitter - <br />
-            Github - 
+            LinkedIn - "www.linkedin.com/in/ishani-kundu-886266222" <br />
+            Twitter - "https://x.com/ishaniiii_k" <br />
+            Github - "https://github.com/ishani-k"
           </p>
           {/* Example placeholder content — you can replace with your image, contact info, etc. */}
         </motion.div>

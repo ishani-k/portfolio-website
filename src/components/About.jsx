@@ -54,11 +54,11 @@ export default function About() {
               className="space-y-6"
             >
               <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-justify">
-                I build full stack web applications end-to-end, designing efficient backend systems while also specializing in creating seamless, interactive frontend experiences. I focus on writing clean, maintainable code that ensures every application is reliable, performant, and thoughtfully engineered.
+                I’m a 2025 B.Tech CSE (AI & ML) graduate who builds full-stack web applications that balance clean design with solid engineering. I enjoy working across the stack, from crafting intuitive interfaces to building efficient backend systems and managing databases.
               </p>
 
               <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-justify">
-                Alongside development, I have a strong foundation in Data Structures and Algorithms, which allows me to approach problems methodically, optimize performance, and design efficient solutions. I enjoy tackling complex challenges and continuously refining my skills to deliver projects that are both functional and impactful.
+                With strong problem-solving skills in Data Structures and Algorithms and a foundation in AI & ML, I focus on creating smart, scalable, and reliable digital solutions.
               </p>
             </motion.div>
           </div>

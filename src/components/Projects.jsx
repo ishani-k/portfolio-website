@@ -1,33 +1,55 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button"; 
-import prospr from "../assets/prospr.png"
-import snipify from "../assets/snipify.png"
+import prospr from "../assets/prospr.png";
+import snipify from "../assets/snipify.png";
+
+// Import tech icons
+import { FaReact, FaJs, FaPython, FaNodeJs, FaClipboard, FaRegChartBar } from "react-icons/fa";
+import { SiTailwindcss, SiOpenai, SiPostgresql, SiNextdotjs, SiGooglegemini, SiSupabase, SiPrisma, SiMongodb, SiExpress, SiJavascript, SiShadcnui, SiClerk, SiRazorpay } from "react-icons/si";
 
 const projects = [
   {
     title: "Prospr",
-    description:"An AI-powered expense tracker that scans receipts to auto-capture transactions, tracks monthly budgets, and provides detailed spending insights. It sends alerts when users near budget limits and offers a transaction sheet to view, edit, or manage recurring expenses efficiently.",
+    description:
+      "An AI-powered expense tracker that scans receipts to auto-capture transactions, tracks monthly budgets, and provides detailed spending insights. It sends alerts when users near budget limits and offers a transaction sheet to view, edit, or manage recurring expenses efficiently.",
     image: prospr,
-    liveLink: "",
-    githubLink: "",
-    techStack: [],
+    liveLink: "https://prospr-fintracker.vercel.app/",
+    githubLink: "https://github.com/ishani-k/Prospr",
+    techStack: [
+      { name: "NextJS", icon: <SiNextdotjs /> },
+      { name: "Shadcn UI", icon: <SiShadcnui /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "PrismaORM", icon: <SiPrisma /> },
+      { name: "Supabase", icon: <SiSupabase /> },
+      { name: "Clerk Auth", icon: <SiClerk /> },
+      { name: "Gemini API", icon: <SiGooglegemini/> },
+    ],
   },
   {
     title: "Snipify",
     description:
-      "An AI-powered tool that automatically removes image backgrounds with precision and speed. Users can upload images, get clean transparent outputs instantly, and manage usage through a credit-based system — with options to purchase additional credits as needed.",
+      "An AI-powered tool that automatically removes image backgrounds with precision and speed. Users can upload images, get clean transparent outputs instantly, and manage usage through a credit-based system, with options to purchase additional credits as needed.",
     image: snipify,
-    liveLink: "",
-    githubLink: "",
-    techStack: [],
+    liveLink: "https://snipify-frontend.onrender.com/",
+    githubLink: "https://github.com/ishani-k/Snipify",
+    techStack: [
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Express.js", icon: <SiExpress /> },
+      { name: "React.js", icon: <FaReact /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "Clerk Auth", icon: <SiClerk /> },
+      { name: "Razorpay", icon: <SiRazorpay /> },
+
+    ],
   },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 section-gradient-2 px-10">
-      
       <div className="container mx-auto">
         <motion.div
           className="max-w-6xl mx-auto"
@@ -66,17 +88,21 @@ export default function Projects() {
                     {project.description}
                   </p>
 
+                  {/* Tech Stack Buttons */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.techStack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-peach-100 dark:bg-gray-800 rounded-full text-xs"
+                    {project.techStack.map((tech, i) => (
+                      <Button
+                        key={i}
+                        variant="outline"
+                        className="flex items-center gap-2 cursor-default border-gray-400 rounded-lg dark:border-gray-700 bg-gray dark:bg-gray-800 text-gray-800 dark:text-gray-200"
                       >
-                        {tech}
-                      </span>
+                        <span className="text-lg">{tech.icon}</span>
+                        <span className="text-sm">{tech.name}</span>
+                      </Button>
                     ))}
                   </div>
 
+                  {/* Links */}
                   <div className="flex flex-wrap gap-3">
                     <Button className="bg-black hover:bg-gray-600 dark:bg-blue-600 dark:hover:bg-blue-700">
                       <a
