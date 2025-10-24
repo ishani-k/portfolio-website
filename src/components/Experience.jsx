@@ -36,7 +36,7 @@ export default function Experience() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl zalando-sans-expanded font-extrabold bg-gradient-to-tr from-[#0f2027] via-[#25414b] to-[#385c6b] bg-clip-text text-transparent tracking-wide mb-12 text-center">
             Professional Experience
           </h2>
 

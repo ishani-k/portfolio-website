@@ -14,7 +14,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl zalando-sans-expanded font-extrabold bg-gradient-to-tr from-[#0f2027] via-[#25414b] to-[#385c6b] bg-clip-text text-transparent tracking-wide mb-12 text-center">
             About Me
           </h2>
 
@@ -60,7 +60,7 @@ export default function About() {
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    <SiLeetcode className="h-4 w-4 sm:h-5 sm:w-5" />  LeetCode
+                    <SiLeetcode className="h-4 w-4 sm:h-5 sm:w-5" /> &nbsp;LeetCode
                   </a>
                 </Button>
               </div>

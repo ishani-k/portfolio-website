@@ -57,8 +57,8 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold mb-10 sm:mb-12 text-center">
-            Projects
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl zalando-sans-expanded font-extrabold bg-gradient-to-tr from-[#0f2027] via-[#25414b] to-[#385c6b] bg-clip-text text-transparent tracking-wide mb-10 sm:mb-12 text-center">
+            Proof of Work
           </h2>
 
           <div className="space-y-10 sm:space-y-12">
@@ -93,7 +93,7 @@ export default function Projects() {
                       <Button
                         key={i}
                         variant="outline"
-                        className="flex items-center gap-2 cursor-default border-gray-400 rounded-lg bg-gray-100 text-gray-800 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 lg:px-3 lg:py-1.5"
+                        className="flex items-center gap-2 cursor-default border-gray-400 rounded-lg bg-gray-100 hover:bg-gray-700 hover:text-slate-100 text-gray-800 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 lg:px-3 lg:py-1.5"
                       >
                         <span className="text-sm sm:text-base md:text-lg lg:text-base">{tech.icon}</span>
                         <span className="text-xs sm:text-sm md:text-base lg:text-sm">{tech.name}</span>

@@ -57,7 +57,7 @@ export default function ToolsAndTech() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-12"
+          className="text-2xl sm:text-3xl md:text-4xl zalando-sans-expanded font-extrabold bg-gradient-to-tr from-[#0f2027] via-[#25414b] to-[#385c6b] bg-clip-text text-transparent tracking-wide mb-12 text-center"
         >
           Tools & Technologies
         </motion.h2>
@@ -74,7 +74,7 @@ export default function ToolsAndTech() {
               <Button
                 key={`top-${index}`}
                 variant="outline"
-                className="flex items-center gap-2 px-4 py-2 text-sm md:text-base inline-flex"
+                className=" items-center gap-2 px-4 py-2 text-sm md:text-base inline-flex"
               >
                 <span className="text-lg">{tech.icon}</span>
                 {tech.name}
@@ -88,7 +88,7 @@ export default function ToolsAndTech() {
               <Button
                 key={`bottom-${index}`}
                 variant="outline"
-                className="flex items-center gap-2 px-4 py-2 text-sm md:text-base inline-flex"
+                className="items-center gap-2 px-4 py-2 text-sm md:text-base inline-flex"
               >
                 <span className="text-lg">{tech.icon}</span>
                 {tech.name}
