@@ -156,7 +156,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-400"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-700"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
       >

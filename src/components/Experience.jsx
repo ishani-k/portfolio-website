@@ -21,7 +21,8 @@ const experiences = [
       "Completed 80+ hours of training on AWS, Azure, and GCP, building skills in cloud deployment and infrastructure.",
       "Gained hands-on experience in DevOps and automation, applying concepts to 3+ digital transformation case studies.",
     ],
-    companyLink: "https://drive.google.com/file/d/1GYJFsoP2tRAzbyOCoWirMhdVo4oezhd-/view",
+    companyLink:
+      "https://drive.google.com/file/d/1GYJFsoP2tRAzbyOCoWirMhdVo4oezhd-/view",
   },
 ];
 
@@ -30,7 +31,7 @@ export default function Experience() {
     <section id="experience" className="py-20 section-gradient-2">
       <div className="container mx-auto px-4">
         <motion.div
-          className="max-w-5xl mx-auto" // widened to match contact section
+          className="max-w-5xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -40,7 +41,10 @@ export default function Experience() {
             Professional Experience
           </h2>
 
-          <div className="space-y-12">
+          <div className="space-y-12 relative">
+            {/* continuous vertical line */}
+            <div className="hidden md:block absolute left-[10px] top-0 bottom-0 w-[2px] bg-blue-900 dark:bg-gray-700" />
+
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -51,19 +55,18 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
                 <div className="md:grid md:grid-cols-12 md:gap-4">
-                  {/* Timeline line */}
+                  {/* timeline dot */}
                   <div className="hidden md:block md:col-span-1 relative">
-                    <div className="h-full w-px bg-blue-900 dark:bg-gray-700 absolute left-1/2 transform -translate-x-1/2" />
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-900 dark:bg-primary border-4 border-cream dark:border-gray-900" />
+                    <div className="absolute top-0 left-[10px] transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-900 dark:bg-primary border-4 border-cream dark:border-gray-900 z-10" />
                   </div>
 
-                  {/* Mobile timeline dot */}
+                  {/* mobile dot */}
                   <div className="absolute left-0 top-0 md:hidden">
                     <div className="w-4 h-4 rounded-full bg-blue-900 dark:bg-primary border-4 border-cream dark:border-gray-900" />
                   </div>
 
-                  {/* Content */}
-                  <div className="md:col-span-11 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm max-w-3xl md:max-w-5xl mx-auto w-[95%] md:w-full">
+                  {/* content box */}
+                  <div className="md:col-span-11 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm max-w-3xl md:max-w-5xl mx-auto w-[95%] md:w-full transform transition-all duration-300 hover:scale-[1.03] hover:shadow-md">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold">{exp.title}</h3>
@@ -87,7 +90,9 @@ export default function Experience() {
                         {exp.period}
                       </span>
                     </div>
-                    <ul className="space-y-2">
+
+                    {/* add bullet dots before each detail */}
+                    <ul className="space-y-2 list-disc list-inside">
                       {exp.details.map((detail, idx) => (
                         <li key={idx} className="text-gray-600 dark:text-gray-400">
                           {typeof detail === "string" ? (
@@ -99,7 +104,6 @@ export default function Experience() {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <span className="mr-2">•</span>
                               <span className="hover:underline">{detail.title}</span>
                               <ExternalLink className="h-3 w-3 ml-1 mt-1 flex-shrink-0" />
                             </a>

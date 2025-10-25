@@ -1,7 +1,7 @@
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Linkedin, Twitter, Github, ArrowUpRight } from "lucide-react";
+import { Linkedin, Twitter, Github } from "lucide-react";
 
 const Contact = () => {
   const form = useRef();

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import profileImage from "../assets/ishani.jpg";
 import { Button } from "./ui/button"; 
-import { SiLeetcode } from "react-icons/si"; // LeetCode logo
+import { SiLeetcode } from "react-icons/si"; 
 
 export default function About() {
   return (
@@ -26,7 +26,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative w-64 sm:w-80 md:w-96 aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+              <div className="relative w-49 sm:w-80 md:w-80 aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all">
                 <img
                   src={profileImage}
                   alt="Ishani's portrait"

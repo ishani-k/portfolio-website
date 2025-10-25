@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -36,7 +36,7 @@ export default function Header() {
       <div className="flex items-center justify-between px-20 py-5">
         <a
           href="#home"
-          className="text-2xl font-bold tracking-tight text-gray-800 hover:text-pink-700 hover:text-[25px] transition-all"
+          className="text-2xl font-bold tracking-tight text-gray-800 hover:text-[25px] transition-all"
         >
           ishani-kundu.
         </a>
@@ -47,7 +47,7 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-gray-800 hover:text-pink-500 hover:opacity-80 transition-all"
+              className="text-sm font-medium text-gray-800 hover:text-[16px] hover:opacity-80 transition-all"
             >
               {item.name}
             </a>
