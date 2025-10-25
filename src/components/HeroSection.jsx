@@ -35,7 +35,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-10 overflow-hidden"
     >
-      {/* Background animations (unchanged) */}
+      {/* Bg animations */}
       {!isDark && (
         <div className="absolute inset-0 -z-5">
           <motion.div
@@ -58,14 +58,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* ✨ Frosted Glass Ribbon with Shimmer Light Ray */}
+          {/* frost bg*/}
           <motion.div
             className="relative inline-flex items-center gap-2 mb-5 px-5 py-2 rounded-full border border-gray-600 backdrop-blur-md bg-white/10 dark:bg-black/20 text-sm text-gray-100 shadow-sm overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            {/* Small bright neon dot */}
+            {/* online dot */}
             <motion.span
               className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_2px_rgba(34,197,94,0.9)]"
               animate={{ opacity: [1, 0.5, 1] }}
@@ -81,7 +81,7 @@ export default function Hero() {
             />
           </motion.div>
 
-          {/* 🩶 Typing-style hero heading (one letter at a time) */}
+          {/* Typing-style hero heading (one letter at a time) */}
           <motion.h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-[39px] merriweather font-bold bg-gradient-to-t from-[#0f2027] via-[#223941] to-[#395764] bg-clip-text text-transparent tracking-wide mb-4 text-center leading-snug"
             variants={sentence}

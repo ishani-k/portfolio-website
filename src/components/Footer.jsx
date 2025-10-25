@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://github.com/ishani-k"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-300 dark:hover:text-primary transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
@@ -48,7 +48,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/ishani-kundu-886266222"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-300 dark:hover:text-primary transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />

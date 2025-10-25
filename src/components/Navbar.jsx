@@ -41,7 +41,7 @@ export default function Header() {
           ishani-kundu.
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <a
@@ -55,7 +55,7 @@ export default function Header() {
           
         </nav>
 
-        {/* Mobile Navigation Toggle */}
+        {/* Mobile Nav */}
         <div className="flex items-center gap-2 md:hidden">
           <Button
             variant="ghost"
