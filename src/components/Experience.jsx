@@ -66,10 +66,10 @@ export default function Experience() {
                   </div>
 
                   {/* content box */}
-                  <div className="md:col-span-11 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm max-w-3xl md:max-w-5xl mx-auto w-[95%] md:w-full transform transition-all duration-300 hover:scale-[1.03] hover:shadow-md">
+                  <div className="md:col-span-11 bg-gray-200 dark:bg-gray-800 rounded-lg p-6 shadow-sm max-w-3xl md:max-w-5xl mx-auto w-[95%] md:w-full transform transition-all duration-300 hover:scale-[1.03] hover:shadow-md">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold">{exp.title}</h3>
+                        <h3 className="text-xl font-bold text-gray-800">{exp.title}</h3>
                         <div className="flex items-center mt-1">
                           <p className="text-gray-600 dark:text-gray-300">
                             {exp.company}

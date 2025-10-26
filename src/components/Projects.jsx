@@ -65,7 +65,7 @@ export default function Projects() {
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-white/80 rounded-xl flex flex-col md:flex-row overflow-hidden shadow-md"
+                className="bg-gray-200 rounded-xl flex flex-col md:flex-row overflow-hidden shadow-md"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -82,7 +82,7 @@ export default function Projects() {
 
                 {/* Text section */}
                 <div className="p-4 sm:p-6 md:w-1/2">
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold mb-2">{project.title}</h3>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
                   <p className="text-sm sm:text-base md:text-lg lg:text-base text-gray-700 mb-4">
                     {project.description}
                   </p>
@@ -103,7 +103,7 @@ export default function Projects() {
 
                   {/* Links */}
                   <div className="flex flex-wrap justify-center gap-3">
-                    <Button className="bg-black hover:bg-gray-700 text-xs sm:text-sm md:text-base lg:text-sm px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 lg:py-1.5">
+                    <Button className="bg-gray-900 hover:bg-gray-700 text-xs sm:text-sm md:text-base lg:text-sm px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 lg:py-1.5">
                       <a
                         href={project.liveLink}
                         target="_blank"

@@ -71,7 +71,7 @@ export default function Hero() {
               animate={{ opacity: [1, 0.5, 1] }}
               transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
             />
-            <span className="tracking-normal text-slate-800 italic">Open to freelance & full-time opportunities</span>
+            <span className="tracking-normal text-slate-800 italic font-semibold">Available for work</span>
 
             {/* Passing ray of light shimmer */}
             <motion.div
@@ -110,14 +110,12 @@ export default function Hero() {
 
           {/* Paragraph fades in fully together */}
           <motion.p
-            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed font-normal"
+            className="text-lg md:text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed font-normal"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 2.5 }}
           >
-            I specialize in developing robust end-to-end web applications focused on functionality,
-            performance, and seamless user experience. From intuitive frontend designs to
-            efficient backend logic, I turn ideas into reliable, modern digital solutions.
+            I specialize in building <span className="font-bold text-slate-700">Next.js</span> applications. Quick to learn, quicker to build.
           </motion.p>
 
           {/* Buttons (unchanged) */}

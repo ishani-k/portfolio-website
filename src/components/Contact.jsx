@@ -37,7 +37,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col md:flex-row items-stretch"
+          className="w-full bg-gray-200 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col md:flex-row items-stretch"
         >
           {/* Left Section */}
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center p-10 border-b md:border-b-0 md:border-r border-gray-300 dark:border-gray-700">
