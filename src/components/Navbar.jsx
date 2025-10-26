@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -55,34 +59,28 @@ export default function Header() {
           
         </nav>
 
-        {/* Mobile Nav */}
-        <div className="flex items-center gap-2 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-          >
-            {isOpen ? <Menu className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
-        </div>
-
         {/* Mobile Navigation Menu */}
-        {isOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-cream dark:bg-gray-950 z-50 flex flex-col p-6 backdrop-blur-md shadow-sm">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-lg font-medium py-3 hover:text-black-600 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        )}
-        
+          <Sheet
+            className="md:hidden"
+            open={isOpen} 
+            onOpenChange={(open) => setIsOpen(open)} 
+          >
+            <SheetTrigger className="md:hidden">
+              <Menu className="h-6 w-6" />
+            </SheetTrigger>
+            <SheetContent className="shadow-sm bg-gradient-to-b from-gray-400 to-gray-700">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-lg font-medium hover:text-gray-600 transition-colors py-4 block"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </SheetContent>
+          </Sheet>
       </div>
     </header>
   );

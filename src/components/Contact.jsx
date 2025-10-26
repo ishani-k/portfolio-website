@@ -50,11 +50,11 @@ const Contact = () => {
 
             <div className="flex flex-col gap-4 text-gray-700 dark:text-gray-300">
               <a
-                href="www.linkedin.com/in/ishani-kundu11"
+                href="https://www.linkedin.com/in/ishani-kundu11"
                 target="_blank"
                 className="flex items-center gap-3 hover:text-gray-900 transition-colors"
               >
-                <Linkedin /> linkedin.com/in/ishani-kundu11
+                <Linkedin /> linkedin.com/ishani-kundu11
               </a>
               <a
                 href="https://github.com/ishani-k"
